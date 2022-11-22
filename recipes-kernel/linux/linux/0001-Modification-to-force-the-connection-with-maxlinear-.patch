@@ -1,0 +1,28 @@
+From ce2c1c476aa03e4460c950fb7237f1dc6213aea8 Mon Sep 17 00:00:00 2001
+From: barbara <barbara.cilenti@engicam.com>
+Date: Mon, 20 Jun 2022 09:23:16 +0200
+Subject: [PATCH] Modification to force the connection with maxlinear phys
+
+---
+ drivers/net/pcs/pcs-xpcs.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/drivers/net/pcs/pcs-xpcs.c b/drivers/net/pcs/pcs-xpcs.c
+index 1a5292b8d743..d569977cd792 100644
+--- a/drivers/net/pcs/pcs-xpcs.c
++++ b/drivers/net/pcs/pcs-xpcs.c
+@@ -891,10 +891,8 @@ static int xpcs_get_state_c37_sgmii(struct dw_xpcs *xpcs,
+ 	ret = xpcs_read(xpcs, MDIO_MMD_VEND2, DW_VR_MII_AN_INTR_STS);
+ 	if (ret < 0)
+ 		return false;
+-
+-	if (ret & DW_VR_MII_C37_ANSGM_SP_LNKSTS) {
++    if(1) {
+ 		int speed_value;
+-
+ 		state->link = true;
+ 
+ 		speed_value = (ret & DW_VR_MII_AN_STS_C37_ANSGM_SP) >>
+-- 
+2.25.1
+
