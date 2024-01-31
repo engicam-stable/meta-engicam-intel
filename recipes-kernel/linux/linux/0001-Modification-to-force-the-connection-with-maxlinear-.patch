@@ -11,10 +11,10 @@ diff --git a/drivers/net/pcs/pcs-xpcs.c b/drivers/net/pcs/pcs-xpcs.c
 index 1a5292b8d743..d569977cd792 100644
 --- a/drivers/net/pcs/pcs-xpcs.c
 +++ b/drivers/net/pcs/pcs-xpcs.c
-@@ -891,10 +891,8 @@ static int xpcs_get_state_c37_sgmii(struct dw_xpcs *xpcs,
+@@ -932,10 +932,8 @@ static int xpcs_get_state_c37_sgmii(struct dw_xpcs *xpcs,
  	ret = xpcs_read(xpcs, MDIO_MMD_VEND2, DW_VR_MII_AN_INTR_STS);
  	if (ret < 0)
- 		return false;
+ 		return ret;
 -
 -	if (ret & DW_VR_MII_C37_ANSGM_SP_LNKSTS) {
 +    if(1) {

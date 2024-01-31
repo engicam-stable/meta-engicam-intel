@@ -59,14 +59,14 @@ Machines available:
 	$ cd <your working directory>
 	$ git clone git://git.yoctoproject.org/poky.git poky -b kirkstone
 	$ cd poky
-	$ git checkout 88fe015a6314a4da7a21b7e984dfbe0ee34b12cb
-	$ git clone git://git.yoctoproject.org/meta-intel.git -b master
+	$ git checkout 54af8c5e80ebf63707ef4e51cc9d374f716da603
+	$ git clone git://git.yoctoproject.org/meta-intel.git -b kirkstone
 	$ cd meta-intel
-	$ git checkout 0a96edae609a3f48befac36af82cf1eed6786b4a
+	$ git checkout f932ebb2544170f43edd22739f44307809bf8cfb
 	$ cd ..
 	$ git clone git://git.openembedded.org/meta-openembedded -b kirkstone
 	$ cd meta-openembedded
-	$ git checkout fb7b26b0fb243620f52a61296f4eda6af6ad1af6
+	$ git checkout 730e44900a0a86265bad93a16b5a5ff344a07266
 ```
 
 
@@ -86,8 +86,8 @@ image configuration includes desktop demo and tools.
 ```bash
 	$ cd poky
 	$ source oe-init-build-env build
-	$ bitbake-layers add-layer ../meta-engicam-intel
 	$ bitbake-layers add-layer ../meta-intel
+	$ bitbake-layers add-layer ../meta-engicam-intel
 	$ bitbake-layers add-layer ../meta-openembedded/meta-oe
 	$ bitbake-layers add-layer ../meta-openembedded/meta-python
 	$ bitbake core-image-sato
