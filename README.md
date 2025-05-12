@@ -5,7 +5,7 @@ meta-engicam-intel
 
 This BSP provides Engicam hardware specific settings, libraries and applications.
 
-It's based on Yocto kirkston distro with linux 5.15 kernel
+It's based on Yocto scarthgap distro with linux 6.6 kernel
 
 Machines available: 
 
