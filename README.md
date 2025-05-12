@@ -22,19 +22,19 @@ Machines available:
 
 ```text
 	URI: git://git.openembedded.org/bitbake
-	branch: kirkstone
+	branch: scarthgap
 
 	URI: git://git.openembedded.org/openembedded-core
 	layer: meta
-	branch: kirkstone
+	branch: scarthgap
 
 	URI: git://git.yoctoproject.org/meta-intel
 	layer: intel
-	branch: master
+	branch: scarthgap
 
 	URI: git://git.openembedded.org/meta-openembedded
 	layer: openembedded
-	branch: kirkstone
+	branch: scarthgap
 ```
 
 ## 2. Set up the build host system <a name="setupsystem"></a>
@@ -57,16 +57,16 @@ Machines available:
 
 ```bash
 	$ cd <your working directory>
-	$ git clone git://git.yoctoproject.org/poky.git poky -b kirkstone
+	$ git clone git://git.yoctoproject.org/poky.git poky -b scarthgap
 	$ cd poky
-	$ git checkout 54af8c5e80ebf63707ef4e51cc9d374f716da603
-	$ git clone git://git.yoctoproject.org/meta-intel.git -b kirkstone
+	$ git checkout 9c63e0c9646c61663e8cfc6b4c75865cd0cd3b34
+	$ git clone git://git.yoctoproject.org/meta-intel.git -b scarthgap
 	$ cd meta-intel
-	$ git checkout f932ebb2544170f43edd22739f44307809bf8cfb
+	$ git checkout 1a7ccdcaedc965f019a9263364437356b8a2ba29
 	$ cd ..
-	$ git clone git://git.openembedded.org/meta-openembedded -b kirkstone
+	$ git clone git://git.openembedded.org/meta-openembedded -b scarthgap
 	$ cd meta-openembedded
-	$ git checkout 730e44900a0a86265bad93a16b5a5ff344a07266
+	$ git checkout e92d0173a80ea7592c866618ef5293203c50544c
 ```
 
 

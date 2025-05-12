@@ -1,5 +1,4 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/linux:"
-SRC_URI += "file://0001-Modification-to-force-the-connection-with-maxlinear-.patch"
 SRC_URI += "file://ehl-plat-001.cfg"
 SRC_URI += "file://eth-phy.cfg"
 SRC_URI += "file://ehl-can.scc"
